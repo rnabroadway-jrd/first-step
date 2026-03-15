@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 79A Guidelines | RNA Broadway</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Multi:wght@300;400;600&family=Outfit:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        gold: {
+                            50: '#fbf8eb',
+                            100: '#f5edca',
+                            200: '#edd899',
+                            300: '#e3be61',
+                            400: '#dba134',
+                            500: '#d18619',
+                            600: '#b46313',
+                            700: '#944513',
+                            800: '#793616',
+                            900: '#642d15',
+                            950: '#3a1609',
+                        },
+                        slate: {
+                            850: '#151e2e',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .page-header-bg {
+            background-image:
+                linear-gradient(to bottom, rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 1)),
+                url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.4) 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(219, 161, 52, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(219, 161, 52, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #fbf8eb, #dba134);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-slate-950 text-slate-300 antialiased selection:bg-gold-500/30 selection:text-gold-100 overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 border-b border-white/5 backdrop-blur-md bg-slate-950/80 shadow-lg"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="Redev charter.html" class="flex items-center gap-3 group cursor-pointer">
+                <div
+                    class="w-10 h-10 rounded-full border border-gold-400/30 flex items-center justify-center bg-gold-400/10 group-hover:bg-gold-400/20 transition-all shrink-0">
+                    <i class="ph ph-buildings text-xl text-gold-400"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-xl tracking-wide text-white leading-tight"><span class="text-gold-400">RNA</span> Broadway</span>
+                    <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Joint Redevelopment</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="Redev charter.html"
+                    class="hover:text-gold-400 transition-colors uppercase tracking-widest text-xs">Home</a>
+                <a href="section_79a.html"
+                    class="text-gold-400 uppercase tracking-widest text-xs border-b border-gold-400 pb-1">Section
+                    79A</a>
+                <a href="self_redevelopment.html"
+                    class="hover:text-gold-400 transition-colors uppercase tracking-widest text-xs">Self
+                    Redevelopment</a>
+                <a href="deemed_conveyance.html"
+                    class="hover:text-gold-400 transition-colors uppercase tracking-widest text-xs">Deemed Conveyance</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="relative pt-40 pb-20 page-header-bg border-b border-white/10">
+        <div class="absolute inset-0 bg-grid opacity-30 pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center reveal">
+            <span
+                class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-slate-900/60 border border-gold-400/20 text-gold-300 text-xs font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm">
+                Legal Compliance
+            </span>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Understanding Section <span class="text-gradient">79A</span>
+            </h1>
+            <p class="text-lg text-slate-400 font-light max-w-2xl mx-auto">
+                A simplified breakdown of the guidelines governing the redevelopment of Co-operative Housing Societies
+                in Maharashtra.
+            </p>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="py-24 bg-slate-950 relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="space-y-8">
+
+                <!-- Step 1 -->
+                <div id="step-card-1"
+                    class="glass-card p-8 md:p-10 rounded-[2rem] reveal group cursor-pointer transition-all duration-300"
+                    onclick="toggleStep(1)">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div
+                            class="w-14 h-14 shrink-0 rounded-2xl bg-slate-800/80 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl font-bold font-serif transition-colors group-hover:bg-gold-500/20">
+                            1
+                        </div>
+                        <div class="flex-1 w-full">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="text-2xl font-semibold text-white mb-3 group-hover:text-gold-300 transition-colors pr-8">
+                                    Convene a Special General Meeting (SGM)</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center mt-1 shrink-0 group-hover:bg-gold-400/10 transition-colors">
+                                    <i id="step-icon-1"
+                                        class="ph ph-caret-down text-xl text-slate-400 group-hover:text-gold-400 transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 font-light leading-relaxed">
+                                The redevelopment process kicks off by calling an SGM where a preliminary decision is
+                                taken.
+                                It requires members to agree on exploring redevelopment as a path forward.
+                            </p>
+
+                            <!-- Detailed Breakdown (Hidden by default) -->
+                            <div id="step-content-1" class="hidden mt-6 pt-6 border-t border-white/10">
+                                <ul class="space-y-4 text-slate-300 font-light">
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Application:</strong> Not less than
+                                            20% of the members submit an application to convene an SGM.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Timeline:</strong> The Managing
+                                            Committee organizes the SGM within 1 month.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Quorum:</strong> Quorum required is
+                                            2/3rd of the total members of the society.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Resolution:</strong> A preliminary
+                                            decision is passed to proceed with redevelopment, subject to feasible
+                                            terms.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div id="step-card-2"
+                    class="glass-card p-8 md:p-10 rounded-[2rem] reveal group cursor-pointer transition-all duration-300"
+                    onclick="toggleStep(2)">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div
+                            class="w-14 h-14 shrink-0 rounded-2xl bg-slate-800/80 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl font-bold font-serif transition-colors group-hover:bg-gold-500/20">
+                            2
+                        </div>
+                        <div class="flex-1 w-full">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="text-2xl font-semibold text-white mb-3 group-hover:text-gold-300 transition-colors pr-8">
+                                    Appointment of a PMC (Project Management Consultant)</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center mt-1 shrink-0 group-hover:bg-gold-400/10 transition-colors">
+                                    <i id="step-icon-2"
+                                        class="ph ph-caret-down text-xl text-slate-400 group-hover:text-gold-400 transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 font-light leading-relaxed">
+                                An experienced architect or PMC is officially appointed from an approved panel. Their
+                                role
+                                is to safely guide the society through technical, legal, and financial decisions
+                                transparently.
+                            </p>
+
+                            <div id="step-content-2" class="hidden mt-6 pt-6 border-t border-white/10">
+                                <ul class="space-y-4 text-slate-300 font-light">
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Shortlisting:</strong> The Society
+                                            shortlists at least 3 PMCs/Architects from the government-approved
+                                            panel.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Selection SGM:</strong> Another SGM
+                                            is called to select the final PMC based on presentations and competitive
+                                            quotations.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">PMC Role:</strong> The appointed
+                                            PMC will advise on allowable FSI, TDR, corpus fund formulas, rent
+                                            allowances, and structural blueprints.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div id="step-card-3"
+                    class="glass-card p-8 md:p-10 rounded-[2rem] reveal group cursor-pointer transition-all duration-300"
+                    onclick="toggleStep(3)">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div
+                            class="w-14 h-14 shrink-0 rounded-2xl bg-slate-800/80 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl font-bold font-serif transition-colors group-hover:bg-gold-500/20">
+                            3
+                        </div>
+                        <div class="flex-1 w-full">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="text-2xl font-semibold text-white mb-3 group-hover:text-gold-300 transition-colors pr-8">
+                                    Project Feasibility Report</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center mt-1 shrink-0 group-hover:bg-gold-400/10 transition-colors">
+                                    <i id="step-icon-3"
+                                        class="ph ph-caret-down text-xl text-slate-400 group-hover:text-gold-400 transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 font-light leading-relaxed">
+                                The PMC creates a detailed Project Feasibility Report outlining available FSI, estimated
+                                costs, corpus, member benefits, and expected timelines in accordance with current norms.
+                            </p>
+
+                            <div id="step-content-3" class="hidden mt-6 pt-6 border-t border-white/10">
+                                <ul class="space-y-4 text-slate-300 font-light">
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Surveying:</strong> The PMC surveys
+                                            the land, existing structures, and societal title deeds.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Calculations:</strong> They
+                                            calculate maximum permissible FSI, fungible FSI, and potential commercial
+                                            value of the new plot.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Transparency:</strong> The report
+                                            is circulated to all members digitally and physically for transparency
+                                            before tendering starts.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Validation:</strong> Valid
+                                            suggestions and feedback from members are incorporated into the final
+                                            finalized report.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div id="step-card-4"
+                    class="glass-card p-8 md:p-10 rounded-[2rem] reveal group cursor-pointer transition-all duration-300"
+                    onclick="toggleStep(4)">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div
+                            class="w-14 h-14 shrink-0 rounded-2xl bg-slate-800/80 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl font-bold font-serif transition-colors group-hover:bg-gold-500/20">
+                            4
+                        </div>
+                        <div class="flex-1 w-full">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="text-2xl font-semibold text-white mb-3 group-hover:text-gold-300 transition-colors pr-8">
+                                    Inviting Tenders</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center mt-1 shrink-0 group-hover:bg-gold-400/10 transition-colors">
+                                    <i id="step-icon-4"
+                                        class="ph ph-caret-down text-xl text-slate-400 group-hover:text-gold-400 transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 font-light leading-relaxed">
+                                A transparent tendering process is initiated. Verified developers submit their
+                                operational
+                                and financial bids based on the requirements detailed in the Feasibility Report.
+                            </p>
+
+                            <div id="step-content-4" class="hidden mt-6 pt-6 border-t border-white/10">
+                                <ul class="space-y-4 text-slate-300 font-light">
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Tender Document:</strong> The PMC
+                                            drafts the document ensuring society expectations (budget, design) are
+                                            strictly met.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Public Notice:</strong>
+                                            Advertisements are placed in leading daily newspapers inviting competitive
+                                            bids from developers.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Evaluation:</strong> Developers are
+                                            evaluated on financial soundness, successful past project track record, and
+                                            RERA standings.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Comparative Chart:</strong> A
+                                            transparent comparative chart of all bids is prepared by the PMC to present
+                                            to the society.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div id="step-card-5"
+                    class="glass-card p-8 md:p-10 rounded-[2rem] reveal group cursor-pointer transition-all duration-300"
+                    onclick="toggleStep(5)">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div
+                            class="w-14 h-14 shrink-0 rounded-2xl bg-slate-800/80 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl font-bold font-serif transition-colors group-hover:bg-gold-500/20">
+                            5
+                        </div>
+                        <div class="flex-1 w-full">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="text-2xl font-semibold text-white mb-3 group-hover:text-gold-300 transition-colors pr-8">
+                                    Selection of Developer via SGM</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center mt-1 shrink-0 group-hover:bg-gold-400/10 transition-colors">
+                                    <i id="step-icon-5"
+                                        class="ph ph-caret-down text-xl text-slate-400 group-hover:text-gold-400 transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 font-light leading-relaxed">
+                                A final SGM is held in the presence of an authorized representative of the Registrar. A
+                                minimum required majority consensus must vote to select the most suitable developer.
+                            </p>
+
+                            <div id="step-content-5" class="hidden mt-6 pt-6 border-t border-white/10">
+                                <ul class="space-y-4 text-slate-300 font-light">
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Registrar Officer:</strong> The
+                                            Registrar appoints an authorized officer to oversee the transparency of the
+                                            SGM.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Video Recording:</strong> Video
+                                            recording of the entire proceeding is mandatory for state compliance.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Majority Vote:</strong> A minimum
+                                            of 51% of total members must approve the selected developer via majority
+                                            vote.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Approval NOC:</strong> The
+                                            resolution is minuted, signed, and submitted to the Registrar's office for a
+                                            No Objection Certificate (NOC).</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div id="step-card-6"
+                    class="glass-card p-8 md:p-10 rounded-[2rem] reveal group cursor-pointer transition-all duration-300"
+                    onclick="toggleStep(6)">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div
+                            class="w-14 h-14 shrink-0 rounded-2xl bg-slate-800/80 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl font-bold font-serif transition-colors group-hover:bg-gold-500/20">
+                            6
+                        </div>
+                        <div class="flex-1 w-full">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="text-2xl font-semibold text-white mb-3 group-hover:text-gold-300 transition-colors pr-8">
+                                    Signing of Development Agreement</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center mt-1 shrink-0 group-hover:bg-gold-400/10 transition-colors">
+                                    <i id="step-icon-6"
+                                        class="ph ph-caret-down text-xl text-slate-400 group-hover:text-gold-400 transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 font-light leading-relaxed">
+                                The Society and the chosen Developer execute a formal Development Agreement (DA)
+                                detailing
+                                roles, timelines, penalties, and obligations, ensuring complete legal protection for the
+                                members.
+                            </p>
+
+                            <div id="step-content-6" class="hidden mt-6 pt-6 border-t border-white/10">
+                                <ul class="space-y-4 text-slate-300 font-light">
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Legal Vetting:</strong> The draft
+                                            DA is meticulously prepared and legally vetted by independent legal
+                                            consultants.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Document Details:</strong> The DA
+                                            specifies construction timelines, rent compensations, corpus fund schedules,
+                                            and bank guarantees.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">PAAA Execution:</strong> Members
+                                            sign separate agreements (Permanent Alternate Accommodation Agreement)
+                                            locking in their specific flat dimensions.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Transition:</strong> Once properly
+                                            vacated, the developer proceeds with demolition and construction under
+                                            constant PMC scrutiny.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-white/5 py-16 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid opacity-10 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div
+                class="w-14 h-14 mx-auto rounded-full border border-white/10 flex items-center justify-center bg-white/5 mb-8">
+                <i class="ph ph-buildings text-2xl text-slate-400"></i>
+            </div>
+            <h5 class="text-white font-semibold text-2xl mb-3">RNA Broadway</h5>
+            <p class="text-slate-400 text-sm mb-10">Joint Redevelopment Initiative</p>
+            <div
+                class="h-px w-full max-w-md mx-auto bg-gradient-to-r from-transparent via-white/10 to-transparent mb-10">
+            </div>
+            <p class="text-slate-600 text-xs tracking-widest uppercase">&copy; 2026 RNA Broadway. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        function toggleStep(stepId) {
+            const content = document.getElementById('step-content-' + stepId);
+            const icon = document.getElementById('step-icon-' + stepId);
+            const parentCard = document.getElementById('step-card-' + stepId);
+
+            if (content.classList.contains('hidden')) {
+                // Open step
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+                parentCard.classList.add('border-gold-400/50');
+            } else {
+                // Close step
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+                parentCard.classList.remove('border-gold-400/50');
+            }
+        }
+    </script>
+</body>
+
+</html>

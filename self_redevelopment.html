@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Redevelopment | RNA Broadway</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Multi:wght@300;400;600&family=Outfit:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        gold: {
+                            50: '#fbf8eb',
+                            100: '#f5edca',
+                            200: '#edd899',
+                            300: '#e3be61',
+                            400: '#dba134',
+                            500: '#d18619',
+                            600: '#b46313',
+                            700: '#944513',
+                            800: '#793616',
+                            900: '#642d15',
+                            950: '#3a1609',
+                        },
+                        slate: {
+                            850: '#151e2e',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .page-header-bg {
+            background-image:
+                linear-gradient(to bottom, rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 1)),
+                url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2500&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.4) 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(219, 161, 52, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(219, 161, 52, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #fbf8eb, #dba134);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-slate-950 text-slate-300 antialiased selection:bg-gold-500/30 selection:text-gold-100 overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 border-b border-white/5 backdrop-blur-md bg-slate-950/80 shadow-lg"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="Redev charter.html" class="flex items-center gap-3 group cursor-pointer">
+                <div
+                    class="w-10 h-10 rounded-full border border-gold-400/30 flex items-center justify-center bg-gold-400/10 group-hover:bg-gold-400/20 transition-all shrink-0">
+                    <i class="ph ph-buildings text-xl text-gold-400"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-xl tracking-wide text-white leading-tight"><span class="text-gold-400">RNA</span> Broadway</span>
+                    <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Joint Redevelopment</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="Redev charter.html"
+                    class="hover:text-gold-400 transition-colors uppercase tracking-widest text-xs">Home</a>
+                <a href="section_79a.html"
+                    class="hover:text-gold-400 transition-colors uppercase tracking-widest text-xs">Section 79A</a>
+                <a href="self_redevelopment.html"
+                    class="text-gold-400 uppercase tracking-widest text-xs border-b border-gold-400 pb-1">Self
+                    Redevelopment</a>
+                <a href="deemed_conveyance.html"
+                    class="hover:text-gold-400 transition-colors uppercase tracking-widest text-xs">Deemed Conveyance</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="relative pt-40 pb-20 page-header-bg border-b border-white/10">
+        <div class="absolute inset-0 bg-grid opacity-30 pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center reveal">
+            <span
+                class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-slate-900/60 border border-gold-400/20 text-gold-300 text-xs font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm">
+                Project Approaches
+            </span>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Guide to <span class="text-gradient">Self Redevelopment</span>
+            </h1>
+            <p class="text-lg text-slate-400 font-light max-w-2xl mx-auto">
+                A structured breakdown of empowering the society to act as its own developer, maximizing member benefits
+                while avoiding builder dependencies.
+            </p>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="py-24 bg-slate-950 relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="space-y-8">
+
+                <!-- Step 1 -->
+                <div id="self-step-card-1"
+                    class="glass-card p-8 md:p-10 rounded-[2rem] reveal group cursor-pointer transition-all duration-300"
+                    onclick="toggleSelfStep(1)">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div
+                            class="w-14 h-14 shrink-0 rounded-2xl bg-slate-800/80 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl font-bold font-serif transition-colors group-hover:bg-gold-500/20">
+                            1
+                        </div>
+                        <div class="flex-1 w-full">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="text-2xl font-semibold text-white mb-3 group-hover:text-gold-300 transition-colors pr-8">
+                                    Member Consent & SGM Approval</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center mt-1 shrink-0 group-hover:bg-gold-400/10 transition-colors">
+                                    <i id="self-step-icon-1"
+                                        class="ph ph-caret-down text-xl text-slate-400 group-hover:text-gold-400 transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 font-light leading-relaxed">
+                                Self-redevelopment begins with uniting the members. A formal Special General Meeting
+                                (SGM) must be convened to secure the mandated consent resolving to undertake
+                                self-redevelopment.
+                            </p>
+
+                            <!-- Detailed Breakdown -->
+                            <div id="self-step-content-1" class="hidden mt-6 pt-6 border-t border-white/10">
+                                <ul class="space-y-4 text-slate-300 font-light">
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">SGM Resolution:</strong> A formal
+                                            resolution must be passed favoring self-redevelopment over traditional
+                                            builder-led redevelopment.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Majority Required:</strong> A
+                                            minimum of 51% (or as per prevailing state rules) of members must explicitly
+                                            provide their consent.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Government Incentives:</strong>
+                                            Adopting self-redevelopment unlocks specific concessions like stamp duty
+                                            rebates, extra FSI (depending on state grs), and lower GST.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div id="self-step-card-2"
+                    class="glass-card p-8 md:p-10 rounded-[2rem] reveal group cursor-pointer transition-all duration-300"
+                    onclick="toggleSelfStep(2)">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div
+                            class="w-14 h-14 shrink-0 rounded-2xl bg-slate-800/80 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl font-bold font-serif transition-colors group-hover:bg-gold-500/20">
+                            2
+                        </div>
+                        <div class="flex-1 w-full">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="text-2xl font-semibold text-white mb-3 group-hover:text-gold-300 transition-colors pr-8">
+                                    Appointing the Professional Core Team</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center mt-1 shrink-0 group-hover:bg-gold-400/10 transition-colors">
+                                    <i id="self-step-icon-2"
+                                        class="ph ph-caret-down text-xl text-slate-400 group-hover:text-gold-400 transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 font-light leading-relaxed">
+                                Because the society acts as the developer, it must hire top-tier professionals
+                                (Architects, Legal Advisors, and PMCs) to execute the technical and compliance work.
+                            </p>
+
+                            <div id="self-step-content-2" class="hidden mt-6 pt-6 border-t border-white/10">
+                                <ul class="space-y-4 text-slate-300 font-light">
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Architect / PMC:</strong> Prepares
+                                            the project feasibility report, layouts, estimates construction costs, and
+                                            manages subsequent tenders.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Legal Advisor:</strong> Ensures
+                                            title clearance, navigates state regulations, and drafts member agreements
+                                            and contractor contracts.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Financial Consultant:</strong>
+                                            Handles loan syndication, tax structuring (GST, Income Tax), and manages the
+                                            escrow account for cash flow.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div id="self-step-card-3"
+                    class="glass-card p-8 md:p-10 rounded-[2rem] reveal group cursor-pointer transition-all duration-300"
+                    onclick="toggleSelfStep(3)">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div
+                            class="w-14 h-14 shrink-0 rounded-2xl bg-slate-800/80 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl font-bold font-serif transition-colors group-hover:bg-gold-500/20">
+                            3
+                        </div>
+                        <div class="flex-1 w-full">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="text-2xl font-semibold text-white mb-3 group-hover:text-gold-300 transition-colors pr-8">
+                                    Securing Project Finance</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center mt-1 shrink-0 group-hover:bg-gold-400/10 transition-colors">
+                                    <i id="self-step-icon-3"
+                                        class="ph ph-caret-down text-xl text-slate-400 group-hover:text-gold-400 transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 font-light leading-relaxed">
+                                Unlike conventional redevelopment where a builder brings capital, the society procures
+                                project funding from approved cooperative banks or NBFCs specifically dedicated for
+                                self-redevelopment.
+                            </p>
+
+                            <div id="self-step-content-3" class="hidden mt-6 pt-6 border-t border-white/10">
+                                <ul class="space-y-4 text-slate-300 font-light">
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Funding Source:</strong> Procure a
+                                            construction loan from MHADA-approved banks (e.g., MDCC Bank). Members'
+                                            personal properties securely held as primary collateral.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Sales Revenue:</strong> The loan is
+                                            repaid via phased sales of the extra "saleable" flats built through the
+                                            allowable FSI.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Surplus Profits:</strong> Any
+                                            surplus generated after loan repayment belongs entirely to the society /
+                                            members, drastically increasing corpora funds.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div id="self-step-card-4"
+                    class="glass-card p-8 md:p-10 rounded-[2rem] reveal group cursor-pointer transition-all duration-300"
+                    onclick="toggleSelfStep(4)">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div
+                            class="w-14 h-14 shrink-0 rounded-2xl bg-slate-800/80 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl font-bold font-serif transition-colors group-hover:bg-gold-500/20">
+                            4
+                        </div>
+                        <div class="flex-1 w-full">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="text-2xl font-semibold text-white mb-3 group-hover:text-gold-300 transition-colors pr-8">
+                                    Design, Approvals & RERA Registration</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center mt-1 shrink-0 group-hover:bg-gold-400/10 transition-colors">
+                                    <i id="self-step-icon-4"
+                                        class="ph ph-caret-down text-xl text-slate-400 group-hover:text-gold-400 transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 font-light leading-relaxed">
+                                The appointed Architect secures all necessary municipal permissions, Intimation of
+                                Disapproval (IOD), and finally, lists the project under MahaRERA.
+                            </p>
+
+                            <div id="self-step-content-4" class="hidden mt-6 pt-6 border-t border-white/10">
+                                <ul class="space-y-4 text-slate-300 font-light">
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Layout Finalization:</strong> The
+                                            architect finalizes building plans incorporating amenities chosen directly
+                                            by society members.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Civic Approvals:</strong> Securing
+                                            IOD, Commencement Certificate (CC), and No Objection Certificates (Fire,
+                                            Water, Aviation, etc).</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">MahaRERA:</strong> Even under
+                                            self-redevelopment, the project must be registered under RERA to permit the
+                                            legal sale of new inventory.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div id="self-step-card-5"
+                    class="glass-card p-8 md:p-10 rounded-[2rem] reveal group cursor-pointer transition-all duration-300"
+                    onclick="toggleSelfStep(5)">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div
+                            class="w-14 h-14 shrink-0 rounded-2xl bg-slate-800/80 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl font-bold font-serif transition-colors group-hover:bg-gold-500/20">
+                            5
+                        </div>
+                        <div class="flex-1 w-full">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="text-2xl font-semibold text-white mb-3 group-hover:text-gold-300 transition-colors pr-8">
+                                    Hiring a Civil Contractor</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center mt-1 shrink-0 group-hover:bg-gold-400/10 transition-colors">
+                                    <i id="self-step-icon-5"
+                                        class="ph ph-caret-down text-xl text-slate-400 group-hover:text-gold-400 transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 font-light leading-relaxed">
+                                The PMC floats tenders to hire an experienced, reputable civil construction company that
+                                executes the build under strict timeline contracts.
+                            </p>
+
+                            <div id="self-step-content-5" class="hidden mt-6 pt-6 border-t border-white/10">
+                                <ul class="space-y-4 text-slate-300 font-light">
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Lump-Sum Contract:</strong> Society
+                                            typically opts for a fixed-price contract, transferring material / labor
+                                            inflation risks to the contractor.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Quality Control:</strong> The
+                                            society’s Architect and PMC act as strict auditors, ensuring high-quality
+                                            construction materials are used.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Escrow Payments:</strong> Payments
+                                            to the contractor are released strictly based on achieved completion
+                                            milestones verified by the PMC.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div id="self-step-card-6"
+                    class="glass-card p-8 md:p-10 rounded-[2rem] reveal group cursor-pointer transition-all duration-300"
+                    onclick="toggleSelfStep(6)">
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div
+                            class="w-14 h-14 shrink-0 rounded-2xl bg-slate-800/80 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl font-bold font-serif transition-colors group-hover:bg-gold-500/20">
+                            6
+                        </div>
+                        <div class="flex-1 w-full">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="text-2xl font-semibold text-white mb-3 group-hover:text-gold-300 transition-colors pr-8">
+                                    Execution, OC & Handover</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center mt-1 shrink-0 group-hover:bg-gold-400/10 transition-colors">
+                                    <i id="self-step-icon-6"
+                                        class="ph ph-caret-down text-xl text-slate-400 group-hover:text-gold-400 transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 font-light leading-relaxed">
+                                Members vacate properties upon receiving advance rent. Construction is completed, extra
+                                flats are sold, bank loan is cleared, and Occupation Certificate (OC) is received.
+                            </p>
+
+                            <div id="self-step-content-6" class="hidden mt-6 pt-6 border-t border-white/10">
+                                <ul class="space-y-4 text-slate-300 font-light">
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Vacation & Demolition:</strong>
+                                            Members receive transit rent via project funding before handing over keys
+                                            for demolition.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Marketing & Sales:</strong> A
+                                            professional real estate agency is usually retained to rapidly market and
+                                            sell the new open inventory flats.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="ph-fill ph-check-circle text-gold-500 mt-1 shrink-0"></i>
+                                        <span><strong class="text-white font-normal">Possession:</strong> Procurement of
+                                            the final Occupation Certificate (OC). Members take possession of their
+                                            significantly larger, upgraded homes.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-white/5 py-16 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid opacity-10 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div
+                class="w-14 h-14 mx-auto rounded-full border border-white/10 flex items-center justify-center bg-white/5 mb-8">
+                <i class="ph ph-buildings text-2xl text-slate-400"></i>
+            </div>
+            <h5 class="text-white font-semibold text-2xl mb-3">RNA Broadway</h5>
+            <p class="text-slate-400 text-sm mb-10">Joint Redevelopment Initiative</p>
+            <div
+                class="h-px w-full max-w-md mx-auto bg-gradient-to-r from-transparent via-white/10 to-transparent mb-10">
+            </div>
+            <p class="text-slate-600 text-xs tracking-widest uppercase">&copy; 2026 RNA Broadway. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        function toggleSelfStep(stepId) {
+            const content = document.getElementById('self-step-content-' + stepId);
+            const icon = document.getElementById('self-step-icon-' + stepId);
+            const parentCard = document.getElementById('self-step-card-' + stepId);
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+                parentCard.classList.add('border-gold-400/50');
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+                parentCard.classList.remove('border-gold-400/50');
+            }
+        }
+    </script>
+</body>
+
+</html>
