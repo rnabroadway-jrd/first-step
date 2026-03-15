@@ -119,6 +119,18 @@
                 <a href="deemed_conveyance.html"
                     class="text-gold-400 uppercase tracking-widest text-xs border-b border-gold-400 pb-1">Deemed Conveyance</a>
             </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center p-2 text-gold-400 hover:bg-white/5 rounded-lg transition-colors">
+                <i class="ph ph-list text-2xl" id="mobile-menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-slate-950/95 backdrop-blur-xl border-b border-white/10 flex-col py-6 px-6 gap-6 shadow-2xl">
+            <a href="index.html" class="mobile-link text-white hover:text-gold-400 transition-colors uppercase tracking-widest text-sm">Home</a>
+            <a href="section_79a.html" class="mobile-link text-white hover:text-gold-400 transition-colors uppercase tracking-widest text-sm">Section 79A</a>
+            <a href="self_redevelopment.html" class="mobile-link text-white hover:text-gold-400 transition-colors uppercase tracking-widest text-sm">Self Redevelopment</a>
+            <a href="deemed_conveyance.html" class="mobile-link text-white hover:text-gold-400 transition-colors uppercase tracking-widest text-sm">Deemed Conveyance</a>
         </div>
     </nav>
 
@@ -395,6 +407,40 @@
     </footer>
 
     <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMobileMenuOpen = false;
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                isMobileMenuOpen = !isMobileMenuOpen;
+                if (isMobileMenuOpen) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex');
+                    mobileMenuIcon.classList.remove('ph-list');
+                    mobileMenuIcon.classList.add('ph-x');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                    mobileMenuIcon.classList.remove('ph-x');
+                    mobileMenuIcon.classList.add('ph-list');
+                }
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    isMobileMenuOpen = false;
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                    mobileMenuIcon.classList.remove('ph-x');
+                    mobileMenuIcon.classList.add('ph-list');
+                });
+            });
+        }
+
         const revealElements = document.querySelectorAll('.reveal');
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
